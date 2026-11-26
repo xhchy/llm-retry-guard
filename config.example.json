@@ -1,0 +1,18 @@
+{
+  "endpoints": [
+    {
+      "name": "local-ollama",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "api_key": "ollama",
+      "models": ["qwen2.5:0.5b"]
+    }
+  ],
+  "retry": {
+    "max_attempts": 4,
+    "base_delay": 1.0,
+    "max_delay": 30.0,
+    "backoff_factor": 2.0
+  },
+  "rate_limit": {"qpm": 0, "burst": 1},
+  "cooldown_seconds": 30
+}
